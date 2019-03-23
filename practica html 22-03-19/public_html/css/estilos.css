@@ -1,0 +1,145 @@
+/*--------------------Estilos CSS--------------------*/
+body {
+    font-family: Berkshire Swash;
+    /*font-family: Butcherman;*/
+    /*font-family: Nosifer;*/
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+.cabecera {
+    /*background-color: #6CFF23;*/
+    background: linear-gradient(to bottom right, #6CFF23, #61BF32);
+    padding: 15px;
+}
+
+@font-face {
+    font-family: Berkshire Swash;
+    src: url("../fonts/Berkshire-Swash.woff2");
+    /*Fuente de letra Butcherman*/
+    /*font-family: Butcherman;
+    src: url("../fonts/Butcherman.woff2")*/
+
+    /*Fuente de letra Nosifer
+    font-family: Nosifer;
+    src: url("../fonts/Nosifer.woff2");*/
+}
+/*---------------Barra de menú---------------*/
+.barnav {
+    overflow: hidden;
+    background-color: #6CFF23;
+    font-family: Berkshire Swash;
+}
+
+.barnav a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.despegable {
+    float: left;
+    overflow: hidden;
+}
+
+.despegable .btndesp {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.barnav a:hover, .despegable:hover .btndesp, .btndesp:focus {
+    background: linear-gradient(#5BD81D, #44B20C);
+}
+
+.contenido-despegable {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.contenido-despegable a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.contenido-despegable a:hover {
+    background-color: #ddd;
+}
+
+.mostrar {
+    display: block;
+}
+
+.contenido {
+    padding: 16px;
+}
+
+/*Css para el menú despegable que se posicionara a la derecha de la pantalla*/
+.derecha {
+    float: right;
+}
+
+.contenido-derecha {
+    margin-left: -68px;
+}
+/*------------------------------------------------------------------*/
+
+.pegajosa {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.contenido + .pegajosa {
+    padding: 60px;
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .derecha {
+        float: left;
+    }
+
+    .contenido-derecha {
+        margin-left: 0;
+    }
+}
+
+/*animación con JavaScript*/
+#container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: darkturquoise;
+}
+
+#animate {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+}
